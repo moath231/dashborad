@@ -8,6 +8,8 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -22,4 +24,56 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+a{
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+@import '_page.scss';
+@import '_myframwork.scss';
+
+
+
+
+@media (min-width: 268px) {
+  .container {
+    width: 394px;
+  }
+}
+
+@media (min-width: 540px) {
+  .container {
+    width: 530px;
+  }
+}
+
+// small screen
+@media (min-width: 768px) {
+  .container {
+    width: 730px;
+  }
+}
+
+// medium screen
+@media (min-width: 992px) {
+  .container {
+    width: 945px;
+  }
+}
+
+// larg screen
+@media (min-width: 1200px) {
+  .container {
+    width: 1165px;
+  }
 }

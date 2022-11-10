@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,17 +15,385 @@
   <!-- * * google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
-  <title>dashboard</title>
+  <title>animation template</title>
 </head>
+
 <body>
   <header></header>
 
-  <main></main>
+  <main>
+    <div class="page disflex bg-gray">
+      <div class="sidbar p-20 bg-white pos-relative">
+        <h3 class="align-center pos-relative">moath</h3>
+        <ul>
+
+          <li>
+            <a class="disflex align-center c-black fs14 p-10 rad-6" href="">
+              <i class="fa-sharp fa-solid fa-gauge"></i>
+              <span>dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="disflex align-center c-black fs14 p-10 rad-6" href="">
+              <i class="fa-solid fa-gear"></i>
+              <span>setting</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="disflex align-center c-black fs14 p-10 rad-6" href="">
+              <i class="fa-regular fa-user"></i>
+              <span>profile</span>
+            </a>
+          </li>
+
+
+          <li>
+            <a class="disflex align-center c-black fs14 p-10 rad-6" href="">
+              <i class="fa-sharp fa-solid fa-diagram-project"></i>
+              <span>project</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="disflex align-center c-black fs14 p-10 rad-6" href="">
+              <i class="fa-solid fa-chalkboard-user"></i>
+              <span>courses</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="disflex align-center c-black fs14 p-10 rad-6" href="">
+              <i class="fa-solid fa-user-group"></i>
+              <span>friends</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="disflex align-center c-black fs14 p-10 rad-6" href="">
+              <i class="fa-solid fa-files"></i>
+              <span>Files</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="disflex align-center c-black rad-6 fs14 p-10 rad-6" href="">
+              <i class="fa-sharp fa-solid fa-credit-card-front"></i>
+              <span>plans</span>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="Dash">
+        <h1>dashboard</h1>
+
+        <div class="content">
+
+          <div class="box welcome bg-white rad-6">
+            <div class="up">
+              <div class="info">
+                <h2>Welcome</h2>
+                <p>moath</p>
+              </div>
+              <img src="./image/welcome.png" alt="">
+              <img id="imgprofile" src="./image/avatar.png" alt="">
+            </div>
+            <div class="down">
+              <div class="deve disflex justspace">
+                <div class="disflex flexdircol">
+                  Moath
+                  <span>developer</span>
+                </div>
+                <div class="disflex flexdircol">
+                  80
+                  <span>project</span>
+                </div>
+                <div class="disflex flexdircol">
+                  $3652
+                  <span>Earned</span>
+                </div>
+              </div>
+              <button>profile</button>
+            </div>
+          </div>
+
+          <div class="box Draft bg-white rad-6">
+            <h2>Quick Draft</h2>
+            <p>Write A Draft For Your Ideas</p>
+            <form action="">
+              <input class="w-full" placeholder="title" type="text" name="" id="">
+              <textarea class="w-full" placeholder="your thought" name="" id="" cols="30" rows="10"></textarea>
+            </form>
+          </div>
+
+          <div class="box Targets bg-white rad-6">
+            <h2>Yearly Targets</h2>
+            <p>Targets Of The Year</p>
+
+            <div class="row disflex">
+              <div class="i">
+                <i class="fa-sharp fa-solid fa-dollar-sign"></i>
+              </div>
+              <div class="right disflex flexdircol justfycenter">
+                <span>Moany</span>
+                <h4>$100.000</h4>
+                <div class="progress pos-relative">
+                  <span style="width: 80%;">
+                    <span>80%</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row disflex green">
+              <div class="i">
+                <i class="fa-regular fa-diagram-project"></i>
+              </div>
+              <div class="right disflex flexdircol justfycenter">
+                <span>project</span>
+                <h4>32</h4>
+                <div class="progress pos-relative">
+                  <span style="width: 38%;">
+                    <span>38%</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row disflex yellow">
+              <div class="i">
+                <i class="fa-sharp fa-solid fa-users-medical"></i>
+              </div>
+              <div class="right disflex flexdircol justfycenter">
+                <span>team</span>
+                <h4>24</h4>
+                <div class="progress pos-relative">
+                  <span style="width: 55%;">
+                    <span>55%</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="box Statistics bg-white rad-6">
+            <h2 id="title">Tickets Statistics</h2>
+            <p id="ptitle">Everything About Support Tickets</p>
+            <div class="boxs">
+              <div class="box">
+                <i class="fa-regular fa-memo orange"></i>
+                <span>2500</span>
+                <p>Total</p>
+              </div>
+              <div class="box">
+                <i class="fa-solid fa-spinner blue"></i>
+                <span>2500</span>
+                <p>Total</p>
+              </div>
+              <div class="box">
+                <i class="fa-regular fa-circle-check green"></i>
+                <span>2500</span>
+                <p>Total</p>
+              </div>
+              <div class="box">
+                <i class="fa-solid fa-message-xmark red"></i>
+                <span>2500</span>
+                <p>Total</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="box news bg-white rad-6 p-20">
+            <h2>Latest News</h2>
+            <div class="row">
+              <div class="imag">
+                <img src="./image/news1.jpg" alt="">
+                <div class="info">
+                  <h3>upload all the photo</h3>
+                  <p>all the photo extintion png</p>
+                </div>
+              </div>
+              <div class="label rad-6">2 days Ago</div>
+            </div>
+            <div class="row">
+              <div class="imag">
+                <img src="./image/news1.jpg" alt="">
+                <div class="info">
+                  <h3>upload all the photo</h3>
+                  <p>all the photo extintion png</p>
+                </div>
+              </div>
+              <div class="label rad-6">2 days Ago</div>
+            </div>
+            <div class="row">
+              <div class="imag">
+                <img src="./image/news1.jpg" alt="">
+                <div class="info">
+                  <h3>upload all the photo</h3>
+                  <p>all the photo extintion png</p>
+                </div>
+              </div>
+              <div class="label rad-6">2 days Ago</div>
+            </div>
+          </div>
+
+          <div class="box tasks bg-white rad-6 p-20">
+            <h2>Latest Tasks</h2>
+            <div class="row">
+              <div class="info">
+                <h4>Lorem ipsum dolor sit amet.</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <div class="row">
+              <div class="info">
+                <h4>Lorem ipsum dolor sit amet.</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <div class="row">
+              <div class="info">
+                <h4>Lorem ipsum dolor sit amet.</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <div class="row delete">
+              <div class="info">
+                <h4>Lorem ipsum dolor sit amet.</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <div class="row">
+              <div class="info">
+                <h4>Lorem ipsum dolor sit amet.</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+          </div>
+
+          <div class="box top-search bg-white rad-6 p-20">
+            <h2>Top Search Items</h2>
+            <div class="row">
+              <h4>Keyword</h4>
+              <span>Search Count</span>
+            </div>
+            <div class="row">
+              <h4>programming</h4>
+              <span>635</span>
+            </div>
+            <div class="row">
+              <h4>php</h4>
+              <span>928</span>
+            </div>
+            <div class="row">
+              <h4>C++</h4>
+              <span>413</span>
+            </div>
+            <div class="row">
+              <h4>javascript</h4>
+              <span>372</span>
+            </div>
+          </div>
+
+          <div class="box files bg-white rad-6 p-20">
+            <h2>Latest News</h2>
+            <div class="row">
+              <div class="imag">
+                <img src="./image//pdflogo.png" alt="">
+                <div class="info">
+                  <h4>my-file.pdf</h4>
+                  <p>admin</p>
+                </div>
+              </div>
+              <div class="label rad-6">10.2MB</div>
+            </div>
+            <div class="row">
+              <div class="imag">
+                <img src="./image/pnglogo.png" alt="">
+                <div class="info">
+                  <h4>my-file.pdf</h4>
+                  <p>admin</p>
+                </div>
+              </div>
+              <div class="label rad-6">10.2MB</div>
+            </div>
+            <div class="row">
+              <div class="imag">
+                <img src="./image/wordlogo.png" alt="">
+                <div class="info">
+                  <h4>my-file.pdf</h4>
+                  <p>admin</p>
+                </div>
+              </div>
+              <div class="label rad-6">10.2MB</div>
+            </div>
+            <div class="row">
+              <div class="imag">
+                <img src="./image/ziplogo.png" alt="">
+                <div class="info">
+                  <h4>my-file.pdf</h4>
+                  <p>admin</p>
+                </div>
+              </div>
+              <div class="label rad-6">10.2MB</div>
+            </div>
+          </div>
+
+          <div class="box Project bg-white rad-6 p-20">
+            <h2>Last Project Progress</h2>
+            <ul>
+              <li class="complit">first step</li>
+              <li class="complit">scend step</li>
+              <li class="current">therd step</li>
+              <li class="">fourth step</li>
+              <li class="">fifth step</li>
+            </ul>
+            <img src="./image/rocket.gif" alt="">
+          </div>
+
+          <div class="Reminders bg-white rad-6 p-20">
+            <h2>Reminders</h2>
+            <ul>
+              <li>
+                <span></span>
+                <div class="info">
+                  <h5>delete trash files</h5>
+                  <p> 28/09/2022 - 12:00am</p>
+                </div>
+              </li>
+              <li class="orange">
+                <span></span>
+                <div class="info">
+                  <h5>delete trash files</h5>
+                  <p> 28/09/2022 - 12:00am</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
 
   <footer></footer>
 
   <script src="./js/script.js"></script>
 </body>
+
 </html>
