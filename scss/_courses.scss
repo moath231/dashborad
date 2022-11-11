@@ -1,0 +1,44 @@
+// courses
+.page {
+
+  .courses{
+    width: 100%;
+    overflow: hidden;
+    h1 {
+      padding: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      background-color: white;
+      left: 13px;
+      bottom: 10px;
+    }
+
+    h1::before {
+      content: '';
+      position: absolute;
+      width: 25%;
+      height: 3px;
+      background-color: black;
+      left: 13px;
+      bottom: 10px;
+      z-index: 1;
+    }
+
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 20px;
+      margin: 40px 20px;
+
+
+    }
+  }
+}

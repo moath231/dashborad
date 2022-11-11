@@ -140,7 +140,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
-  margin: 0px 20px;
+  margin: 40px 20px;
 }
 .page .Dash .content .welcome .up {
   display: flex;
@@ -423,7 +423,8 @@ a {
   padding-bottom: 15px;
   border-bottom: 1px solid #ccc;
 }
-.page .Dash .content .tasks .row.delete .info h4, .page .Dash .content .tasks .row.delete .info p {
+.page .Dash .content .tasks .row.delete .info h4,
+.page .Dash .content .tasks .row.delete .info p {
   text-decoration: line-through;
   color: #ccc;
 }
@@ -592,6 +593,435 @@ a {
 }
 .page .Dash .content .Reminders ul li.orange .info {
   border-left: 3px solid orange;
+}
+.page .Dash .content .Reminders ul li.green span {
+  background-color: greenyellow;
+}
+.page .Dash .content .Reminders ul li.green .info {
+  border-left: 3px solid greenyellow;
+}
+.page .Dash .content .Reminders ul li.red span {
+  background-color: red;
+}
+.page .Dash .content .Reminders ul li.red .info {
+  border-left: 3px solid red;
+}
+.page .Dash .content .Reminders ul li.black span {
+  background-color: black;
+}
+.page .Dash .content .Reminders ul li.black .info {
+  border-left: 3px solid black;
+}
+.page .Dash .content .post h2.title {
+  margin-bottom: 35px;
+}
+.page .Dash .content .post .up {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.page .Dash .content .post .up .imag {
+  margin-left: 20px;
+  margin-right: 25px;
+}
+.page .Dash .content .post .up .imag img {
+  width: 60px;
+}
+.page .Dash .content .post .up .info p {
+  font-size: 14px;
+  line-height: 2;
+  color: #aaa;
+}
+.page .Dash .content .post .down {
+  text-transform: capitalize;
+  line-height: 1.8;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  min-height: 140px;
+  padding-top: 20px;
+}
+.page .Dash .content .post .icon {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  color: #888;
+}
+.page .Dash .content .social h2 {
+  margin-bottom: 25px;
+}
+.page .Dash .content .social .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 119, 255, 0.231372549);
+  margin-bottom: 20px;
+}
+.page .Dash .content .social .row .left {
+  display: flex;
+  align-items: center;
+}
+.page .Dash .content .social .row .left i {
+  background-color: #0075f2;
+  font-size: 23px;
+  color: #fff;
+  margin-right: 20px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.page .Dash .content .social .row .left i:hover {
+  transform: rotate(5deg);
+}
+.page .Dash .content .social .row .left span {
+  color: #0075f2;
+}
+.page .Dash .content .social .row a {
+  margin-right: 25px;
+  padding: 5px 10px;
+  background-color: #0075f2;
+  color: white;
+  border-radius: 6px;
+}
+.page .Dash .content .social .row.youtube {
+  background-color: rgba(255, 0, 0, 0.274);
+}
+.page .Dash .content .social .row.youtube .left i {
+  background-color: red;
+}
+.page .Dash .content .social .row.youtube .left span {
+  color: red;
+}
+.page .Dash .content .social .row.youtube a {
+  background-color: red;
+}
+.page .Dash .content .social .row.linkedin {
+  background-color: hsla(201deg, 100%, 35%, 0.219);
+}
+.page .Dash .content .social .row.linkedin .left i {
+  background-color: hsl(201deg, 100%, 35%);
+}
+.page .Dash .content .social .row.linkedin .left span {
+  color: #0077b5;
+}
+.page .Dash .content .social .row.linkedin a {
+  background-color: #0077b5;
+}
+.page .Dash .content .social .row.twetter {
+  background-color: rgba(29, 160, 242, 0.322);
+}
+.page .Dash .content .social .row.twetter .left i {
+  background-color: #1da1f2;
+}
+.page .Dash .content .social .row.twetter .left span {
+  color: #1da1f2;
+}
+.page .Dash .content .social .row.twetter a {
+  background-color: #1da1f2;
+}
+.page .Dash .table-dash {
+  margin: 0 20px;
+  overflow-x: auto;
+}
+.page .Dash .table-dash h2 {
+  margin-bottom: 25px;
+}
+.page .Dash .table-dash table {
+  width: 100%;
+  border-spacing: 0;
+  min-width: 1000px;
+}
+.page .Dash .table-dash table thead tr {
+  background-color: #ccc;
+}
+.page .Dash .table-dash table thead tr td {
+  padding: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.page .Dash .table-dash table tbody tr td {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+.page .Dash .table-dash table tbody tr td img {
+  width: 32px;
+  height: 32px;
+  border-radius: 20px;
+}
+.page .Dash .table-dash table tbody tr td img:not(:first-of-type) {
+  margin-left: -20px;
+}
+.page .Dash .table-dash table tbody tr td span {
+  font-size: 13px;
+  padding: 4px 10px;
+  background-color: #22c55e;
+  border-radius: 6px;
+  color: white;
+}
+.page .Dash .table-dash table tbody tr td span.Completed {
+  background-color: #22c55e;
+}
+.page .Dash .table-dash table tbody tr td span.Rejected {
+  background-color: #f44336;
+}
+.page .Dash .table-dash table tbody tr td span.Progress {
+  background-color: #0d69d5;
+}
+.page .Dash .table-dash table tbody tr td span.Pending {
+  background-color: #f59e0b;
+}
+.page .Dash .table-dash table tbody tr:hover {
+  background-color: #e9e9e9;
+}
+.page .Dash .table-dash table tbody tr:nth-child(even) {
+  background-color: #efefef;
+}
+
+.page .setting {
+  width: 100%;
+  overflow: hidden;
+}
+.page .setting h1 {
+  padding: 20px;
+  position: relative;
+  display: inline-block;
+}
+.page .setting h1::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: white;
+  left: 13px;
+  bottom: 10px;
+}
+.page .setting h1::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  background-color: black;
+  left: 13px;
+  bottom: 10px;
+  z-index: 1;
+}
+.page .setting .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  margin: 40px 20px;
+}
+
+.page .project {
+  width: 100%;
+  overflow: hidden;
+}
+.page .project h1 {
+  padding: 20px;
+  position: relative;
+  display: inline-block;
+}
+.page .project h1::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: white;
+  left: 13px;
+  bottom: 10px;
+}
+.page .project h1::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  background-color: black;
+  left: 13px;
+  bottom: 10px;
+  z-index: 1;
+}
+.page .project .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  margin: 40px 20px;
+}
+
+.page .file {
+  width: 100%;
+  overflow: hidden;
+}
+.page .file h1 {
+  padding: 20px;
+  position: relative;
+  display: inline-block;
+}
+.page .file h1::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: white;
+  left: 13px;
+  bottom: 10px;
+}
+.page .file h1::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  background-color: black;
+  left: 13px;
+  bottom: 10px;
+  z-index: 1;
+}
+.page .file .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  margin: 40px 20px;
+}
+
+.page .friends {
+  width: 100%;
+  overflow: hidden;
+}
+.page .friends h1 {
+  padding: 20px;
+  position: relative;
+  display: inline-block;
+}
+.page .friends h1::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: white;
+  left: 13px;
+  bottom: 10px;
+}
+.page .friends h1::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  background-color: black;
+  left: 13px;
+  bottom: 10px;
+  z-index: 1;
+}
+.page .friends .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  margin: 40px 20px;
+}
+
+.page .plans {
+  width: 100%;
+  overflow: hidden;
+}
+.page .plans h1 {
+  padding: 20px;
+  position: relative;
+  display: inline-block;
+}
+.page .plans h1::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: white;
+  left: 13px;
+  bottom: 10px;
+}
+.page .plans h1::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  background-color: black;
+  left: 13px;
+  bottom: 10px;
+  z-index: 1;
+}
+.page .plans .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  margin: 40px 20px;
+}
+
+.page .courses {
+  width: 100%;
+  overflow: hidden;
+}
+.page .courses h1 {
+  padding: 20px;
+  position: relative;
+  display: inline-block;
+}
+.page .courses h1::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: white;
+  left: 13px;
+  bottom: 10px;
+}
+.page .courses h1::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  background-color: black;
+  left: 13px;
+  bottom: 10px;
+  z-index: 1;
+}
+.page .courses .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  margin: 40px 20px;
+}
+
+.page .profile {
+  width: 100%;
+  overflow: hidden;
+}
+.page .profile h1 {
+  padding: 20px;
+  position: relative;
+  display: inline-block;
+}
+.page .profile h1::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  background-color: white;
+  left: 13px;
+  bottom: 10px;
+}
+.page .profile h1::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  background-color: black;
+  left: 13px;
+  bottom: 10px;
+  z-index: 1;
+}
+.page .profile .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  margin: 40px 20px;
 }
 
 .disflex {
