@@ -10,6 +10,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  outline: none;
 }
 
 html {
@@ -35,6 +36,88 @@ a {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+label {
+  display: flex;
+}
+label .toggle-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+}
+label .toggle-switch {
+  width: 78px;
+  height: 32px;
+  background-color: #ccc;
+  border-radius: 15px;
+  position: relative;
+  transition: 0.3s;
+  cursor: pointer;
+}
+label .toggle-switch::before {
+  font-family: "Font Awesome 6 pro";
+  content: "\f00d";
+  font-weight: 900;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 4px;
+  top: 4px;
+  color: #ccc;
+  transition: 0.3s;
+}
+label .toggle-checkbox:checked + .toggle-switch {
+  background-color: #0075ff;
+}
+label .toggle-checkbox:checked + .toggle-switch::before {
+  content: "\f00c";
+  left: 50px;
+  color: #0075ff;
+}
+
+.bup label {
+  cursor: pointer;
+  position: relative;
+}
+.bup input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.bup input[type=radio]:checked + label::after,
+.bup input[type=radio]:checked + label::before {
+  transform: scale(1);
+  border-color: #0075ff;
+}
+.bup label::before {
+  content: "";
+  position: absolute;
+  border: 2px solid #888;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  top: 1;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.bup label::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  background-color: #0075ff;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.3s;
 }
 
 .page {
@@ -136,32 +219,32 @@ a {
   bottom: 10px;
   z-index: 1;
 }
-.page .Dash .content {
+.page .Dash .index {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
   margin: 40px 20px;
 }
-.page .Dash .content .welcome .up {
+.page .Dash .index .welcome .up {
   display: flex;
   justify-content: space-between;
   background-color: #eee;
   padding: 10px;
   position: relative;
 }
-.page .Dash .content .welcome .up .info {
+.page .Dash .index .welcome .up .info {
   margin: 10px 18px;
 }
-.page .Dash .content .welcome .up .info h2 {
+.page .Dash .index .welcome .up .info h2 {
   margin-bottom: 5px;
 }
-.page .Dash .content .welcome .up .info p {
+.page .Dash .index .welcome .up .info p {
   text-transform: capitalize;
 }
-.page .Dash .content .welcome .up img {
+.page .Dash .index .welcome .up img {
   width: 150px;
 }
-.page .Dash .content .welcome .up #imgprofile {
+.page .Dash .index .welcome .up #imgprofile {
   width: 64px;
   position: absolute;
   bottom: -27px;
@@ -170,12 +253,12 @@ a {
   border-radius: 30px;
   box-shadow: 0 0 10px black;
 }
-.page .Dash .content .welcome .down {
+.page .Dash .index .welcome .down {
   background-color: white;
   padding-top: 55px;
   padding-bottom: 65px;
 }
-.page .Dash .content .welcome .down .deve {
+.page .Dash .index .welcome .down .deve {
   padding: 20px 0;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
@@ -183,13 +266,13 @@ a {
   font-weight: bold;
   text-align: center;
 }
-.page .Dash .content .welcome .down .deve span {
+.page .Dash .index .welcome .down .deve span {
   font-size: 14px;
   font-weight: 100;
   margin-top: 10px;
   color: #aaa;
 }
-.page .Dash .content .welcome .down button {
+.page .Dash .index .welcome .down button {
   float: right;
   margin: 20px;
   border: none;
@@ -198,43 +281,43 @@ a {
   background-color: #0075ff;
   font-size: 14px;
 }
-.page .Dash .content .Draft {
+.page .Dash .index .Draft {
   padding: 20px;
 }
-.page .Dash .content .Draft h2 {
+.page .Dash .index .Draft h2 {
   margin-bottom: 15px;
 }
-.page .Dash .content .Draft > p {
+.page .Dash .index .Draft > p {
   margin-bottom: 15px;
 }
-.page .Dash .content .Draft form {
+.page .Dash .index .Draft form {
   background-color: white;
 }
-.page .Dash .content .Draft form input {
+.page .Dash .index .Draft form input {
   border: none;
   background-color: #eee;
   margin-bottom: 10px;
   padding: 7px;
 }
-.page .Dash .content .Draft form textarea {
+.page .Dash .index .Draft form textarea {
   border: none;
   background-color: #eee;
   padding: 7px;
 }
-.page .Dash .content .Targets {
+.page .Dash .index .Targets {
   padding: 20px;
 }
-.page .Dash .content .Targets h2 {
+.page .Dash .index .Targets h2 {
   margin-bottom: 10px;
 }
-.page .Dash .content .Targets p {
+.page .Dash .index .Targets p {
   margin-bottom: 10px;
   color: #aaa;
 }
-.page .Dash .content .Targets .row {
+.page .Dash .index .Targets .row {
   margin-top: 20px;
 }
-.page .Dash .content .Targets .row .i {
+.page .Dash .index .Targets .row .i {
   width: 90px;
   height: 70px;
   color: rgb(0, 117, 255);
@@ -244,29 +327,29 @@ a {
   margin-right: 15px;
   background-color: rgba(0, 117, 255, 0.3);
 }
-.page .Dash .content .Targets .row .i i {
+.page .Dash .index .Targets .row .i i {
   font-size: 19px;
 }
-.page .Dash .content .Targets .row .right {
+.page .Dash .index .Targets .row .right {
   gap: 4px;
   width: 100%;
 }
-.page .Dash .content .Targets .row .right span {
+.page .Dash .index .Targets .row .right span {
   font-size: 14px;
   color: #999;
 }
-.page .Dash .content .Targets .row .right .progress {
+.page .Dash .index .Targets .row .right .progress {
   height: 4px;
   margin-top: 15px;
   width: 100%;
   background-color: rgba(0, 117, 255, 0.3);
 }
-.page .Dash .content .Targets .row .right .progress span {
+.page .Dash .index .Targets .row .right .progress span {
   position: absolute;
   height: 4px;
   background-color: #0075ff;
 }
-.page .Dash .content .Targets .row .right .progress span span {
+.page .Dash .index .Targets .row .right .progress span span {
   position: absolute;
   width: fit-content;
   padding: 5px;
@@ -278,7 +361,7 @@ a {
   color: white;
   border-radius: 6px;
 }
-.page .Dash .content .Targets .row .right .progress span span::after {
+.page .Dash .index .Targets .row .right .progress span span::after {
   content: "";
   border-color: #0075ff transparent transparent transparent;
   border-width: 7px;
@@ -288,48 +371,48 @@ a {
   top: 23px;
   transform: translateX(-50%);
 }
-.page .Dash .content .Targets .green .i {
+.page .Dash .index .Targets .green .i {
   background-color: rgba(34, 197, 94, 0.2);
   color: #22c55e;
 }
-.page .Dash .content .Targets .green .right .progress {
+.page .Dash .index .Targets .green .right .progress {
   background-color: rgba(34, 197, 94, 0.2);
 }
-.page .Dash .content .Targets .green .right .progress span {
+.page .Dash .index .Targets .green .right .progress span {
   background-color: #22c55e;
 }
-.page .Dash .content .Targets .green .right .progress span span::after {
+.page .Dash .index .Targets .green .right .progress span span::after {
   border-color: #22c55e transparent transparent transparent;
 }
-.page .Dash .content .Targets .yellow .i {
+.page .Dash .index .Targets .yellow .i {
   background-color: rgba(245, 158, 11, 0.2);
   color: #f59e0b;
 }
-.page .Dash .content .Targets .yellow .right .progress {
+.page .Dash .index .Targets .yellow .right .progress {
   background-color: rgba(245, 158, 11, 0.2);
 }
-.page .Dash .content .Targets .yellow .right .progress span {
+.page .Dash .index .Targets .yellow .right .progress span {
   background-color: #f59e0b;
 }
-.page .Dash .content .Targets .yellow .right .progress span span::after {
+.page .Dash .index .Targets .yellow .right .progress span span::after {
   border-color: #f59e0b transparent transparent transparent;
 }
-.page .Dash .content .Statistics {
+.page .Dash .index .Statistics {
   padding: 20px;
 }
-.page .Dash .content .Statistics #title {
+.page .Dash .index .Statistics #title {
   margin-bottom: 10px;
 }
-.page .Dash .content .Statistics #ptitle {
+.page .Dash .index .Statistics #ptitle {
   margin-bottom: 50px;
   color: #aaa;
 }
-.page .Dash .content .Statistics .boxs {
+.page .Dash .index .Statistics .boxs {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
-.page .Dash .content .Statistics .boxs .box {
+.page .Dash .index .Statistics .boxs .box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -338,177 +421,177 @@ a {
   padding: 15px;
   width: calc(50% - 20px);
 }
-.page .Dash .content .Statistics .boxs .box i {
+.page .Dash .index .Statistics .boxs .box i {
   font-size: 23px;
 }
-.page .Dash .content .Statistics .boxs .box i.orange {
+.page .Dash .index .Statistics .boxs .box i.orange {
   color: orange;
 }
-.page .Dash .content .Statistics .boxs .box i.red {
+.page .Dash .index .Statistics .boxs .box i.red {
   color: red;
 }
-.page .Dash .content .Statistics .boxs .box i.blue {
+.page .Dash .index .Statistics .boxs .box i.blue {
   color: blue;
 }
-.page .Dash .content .Statistics .boxs .box i.green {
+.page .Dash .index .Statistics .boxs .box i.green {
   color: green;
 }
-.page .Dash .content .Statistics .boxs .box span {
+.page .Dash .index .Statistics .boxs .box span {
   font-size: 25px;
   font-weight: 500;
   margin: 5px 0;
 }
-.page .Dash .content .Statistics .boxs .box p {
+.page .Dash .index .Statistics .boxs .box p {
   font-size: 14px;
   color: #aaa;
 }
-.page .Dash .content .news h2 {
+.page .Dash .index .news h2 {
   margin-bottom: 10px;
 }
-.page .Dash .content .news .row {
+.page .Dash .index .news .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.page .Dash .content .news .row .imag {
+.page .Dash .index .news .row .imag {
   display: flex;
   align-items: center;
   width: 80%;
 }
-.page .Dash .content .news .row .imag img {
+.page .Dash .index .news .row .imag img {
   width: 25%;
   margin-right: 10px;
 }
-.page .Dash .content .news .row .imag .info h3 {
+.page .Dash .index .news .row .imag .info h3 {
   font-size: 19px;
 }
-.page .Dash .content .news .row .imag .info p {
+.page .Dash .index .news .row .imag .info p {
   font-size: 13px;
   margin-top: 6px;
   color: #aaa;
 }
-.page .Dash .content .news .row .label {
+.page .Dash .index .news .row .label {
   font-size: 13px;
   width: fit-content;
   background-color: #ccc;
   padding: 4px 10px;
   flex: 1;
 }
-.page .Dash .content .news .row:not(:last-of-type) {
+.page .Dash .index .news .row:not(:last-of-type) {
   margin-bottom: 20px;
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px;
 }
-.page .Dash .content .tasks h2 {
+.page .Dash .index .tasks h2 {
   margin-bottom: 10px;
 }
-.page .Dash .content .tasks .row {
+.page .Dash .index .tasks .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.page .Dash .content .tasks .row .info h4 {
+.page .Dash .index .tasks .row .info h4 {
   font-weight: 600;
   margin-bottom: 4px;
 }
-.page .Dash .content .tasks .row .info p {
+.page .Dash .index .tasks .row .info p {
   font-size: 14px;
   color: #999;
 }
-.page .Dash .content .tasks .row i {
+.page .Dash .index .tasks .row i {
   cursor: pointer;
 }
-.page .Dash .content .tasks .row:not(:last-of-type) {
+.page .Dash .index .tasks .row:not(:last-of-type) {
   margin-bottom: 10px;
   padding-bottom: 15px;
   border-bottom: 1px solid #ccc;
 }
-.page .Dash .content .tasks .row.delete .info h4,
-.page .Dash .content .tasks .row.delete .info p {
+.page .Dash .index .tasks .row.delete .info h4,
+.page .Dash .index .tasks .row.delete .info p {
   text-decoration: line-through;
   color: #ccc;
 }
-.page .Dash .content .tasks .row.delete i {
+.page .Dash .index .tasks .row.delete i {
   text-decoration: line-through;
   color: #ccc;
   cursor: none;
 }
-.page .Dash .content .top-search h2 {
+.page .Dash .index .top-search h2 {
   margin-bottom: 20px;
 }
-.page .Dash .content .top-search .row:first-of-type {
+.page .Dash .index .top-search .row:first-of-type {
   align-items: center;
 }
-.page .Dash .content .top-search .row:first-of-type h4 {
+.page .Dash .index .top-search .row:first-of-type h4 {
   font-weight: 600;
 }
-.page .Dash .content .top-search .row:first-of-type span {
+.page .Dash .index .top-search .row:first-of-type span {
   background-color: white;
   font-weight: 600;
 }
-.page .Dash .content .top-search .row {
+.page .Dash .index .top-search .row {
   display: flex;
   justify-content: space-between;
 }
-.page .Dash .content .top-search .row h4 {
+.page .Dash .index .top-search .row h4 {
   font-weight: 500;
 }
-.page .Dash .content .top-search .row span {
+.page .Dash .index .top-search .row span {
   width: fit-content;
   padding: 3px 7px;
   background-color: #ccc;
   border-radius: 6px;
 }
-.page .Dash .content .top-search .row:not(:last-of-type) {
+.page .Dash .index .top-search .row:not(:last-of-type) {
   margin-bottom: 20px;
   padding-bottom: 15px;
 }
-.page .Dash .content .files h2 {
+.page .Dash .index .files h2 {
   margin-bottom: 10px;
 }
-.page .Dash .content .files .row {
+.page .Dash .index .files .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.page .Dash .content .files .row .imag {
+.page .Dash .index .files .row .imag {
   display: flex;
   align-items: center;
   width: 100%;
 }
-.page .Dash .content .files .row .imag img {
+.page .Dash .index .files .row .imag img {
   width: 10%;
   margin-right: 10px;
 }
-.page .Dash .content .files .row .imag .info h3 {
+.page .Dash .index .files .row .imag .info h3 {
   font-size: 19px;
 }
-.page .Dash .content .files .row .imag .info p {
+.page .Dash .index .files .row .imag .info p {
   font-size: 13px;
   margin-top: 6px;
   color: #aaa;
 }
-.page .Dash .content .files .row .label {
+.page .Dash .index .files .row .label {
   font-size: 13px;
   width: fit-content;
   background-color: #ccc;
   padding: 4px 10px;
   flex: 1;
 }
-.page .Dash .content .files .row:not(:last-of-type) {
+.page .Dash .index .files .row:not(:last-of-type) {
   margin-bottom: 15px;
   padding-bottom: 15px;
 }
-.page .Dash .content .Project {
+.page .Dash .index .Project {
   position: relative;
 }
-.page .Dash .content .Project h2 {
+.page .Dash .index .Project h2 {
   margin-bottom: 10px;
 }
-.page .Dash .content .Project ul {
+.page .Dash .index .Project ul {
   position: relative;
 }
-.page .Dash .content .Project ul li {
+.page .Dash .index .Project ul li {
   font-size: 20px;
   font-weight: 500;
   text-transform: capitalize;
@@ -516,7 +599,7 @@ a {
   margin-left: 55px;
   margin-bottom: 30px;
 }
-.page .Dash .content .Project ul li::before {
+.page .Dash .index .Project ul li::before {
   content: "";
   position: absolute;
   width: 20px;
@@ -528,10 +611,10 @@ a {
   border: 2px solid white;
   outline: 2px solid #0075ff;
 }
-.page .Dash .content .Project ul li.current::before {
+.page .Dash .index .Project ul li.current::before {
   animation: flash 0.8s infinite alternate;
 }
-.page .Dash .content .Project ul li.complit::before {
+.page .Dash .index .Project ul li.complit::before {
   background-color: #0075ff;
 }
 @keyframes flash {
@@ -542,7 +625,7 @@ a {
     background-color: #0075ff;
   }
 }
-.page .Dash .content .Project ul::before {
+.page .Dash .index .Project ul::before {
   content: "";
   position: absolute;
   width: 2px;
@@ -550,7 +633,7 @@ a {
   background-color: #0075ff;
   left: 26px;
 }
-.page .Dash .content .Project img {
+.page .Dash .index .Project img {
   position: absolute;
   right: 60px;
   width: 100px;
@@ -558,81 +641,81 @@ a {
   opacity: 0.3;
   transform: rotate(-51deg);
 }
-.page .Dash .content .Reminders h2 {
+.page .Dash .index .Reminders h2 {
   margin-bottom: 15px;
 }
-.page .Dash .content .Reminders ul li {
+.page .Dash .index .Reminders ul li {
   position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 25px;
 }
-.page .Dash .content .Reminders ul li span {
+.page .Dash .index .Reminders ul li span {
   background-color: blue;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   margin-right: 15px;
 }
-.page .Dash .content .Reminders ul li .info {
+.page .Dash .index .Reminders ul li .info {
   border-left: 3px solid blue;
   padding-left: 20px;
 }
-.page .Dash .content .Reminders ul li .info h5 {
+.page .Dash .index .Reminders ul li .info h5 {
   margin-bottom: 10px;
   text-transform: capitalize;
   font-weight: 600;
   font-size: 17px;
 }
-.page .Dash .content .Reminders ul li .info p {
+.page .Dash .index .Reminders ul li .info p {
   font-size: 13px;
   color: #999;
 }
-.page .Dash .content .Reminders ul li.orange span {
+.page .Dash .index .Reminders ul li.orange span {
   background-color: orange;
 }
-.page .Dash .content .Reminders ul li.orange .info {
+.page .Dash .index .Reminders ul li.orange .info {
   border-left: 3px solid orange;
 }
-.page .Dash .content .Reminders ul li.green span {
+.page .Dash .index .Reminders ul li.green span {
   background-color: greenyellow;
 }
-.page .Dash .content .Reminders ul li.green .info {
+.page .Dash .index .Reminders ul li.green .info {
   border-left: 3px solid greenyellow;
 }
-.page .Dash .content .Reminders ul li.red span {
+.page .Dash .index .Reminders ul li.red span {
   background-color: red;
 }
-.page .Dash .content .Reminders ul li.red .info {
+.page .Dash .index .Reminders ul li.red .info {
   border-left: 3px solid red;
 }
-.page .Dash .content .Reminders ul li.black span {
+.page .Dash .index .Reminders ul li.black span {
   background-color: black;
 }
-.page .Dash .content .Reminders ul li.black .info {
+.page .Dash .index .Reminders ul li.black .info {
   border-left: 3px solid black;
 }
-.page .Dash .content .post h2.title {
+.page .Dash .index .post h2.title {
   margin-bottom: 35px;
 }
-.page .Dash .content .post .up {
+.page .Dash .index .post .up {
   display: flex;
   align-items: center;
   margin-bottom: 25px;
 }
-.page .Dash .content .post .up .imag {
+.page .Dash .index .post .up .imag {
   margin-left: 20px;
   margin-right: 25px;
 }
-.page .Dash .content .post .up .imag img {
+.page .Dash .index .post .up .imag img {
   width: 60px;
 }
-.page .Dash .content .post .up .info p {
+.page .Dash .index .post .up .info p {
   font-size: 14px;
   line-height: 2;
   color: #aaa;
 }
-.page .Dash .content .post .down {
+.page .Dash .index .post .down {
   text-transform: capitalize;
   line-height: 1.8;
   border-top: 1px solid #eee;
@@ -640,27 +723,27 @@ a {
   min-height: 140px;
   padding-top: 20px;
 }
-.page .Dash .content .post .icon {
+.page .Dash .index .post .icon {
   display: flex;
   justify-content: space-between;
   margin-top: 25px;
   color: #888;
 }
-.page .Dash .content .social h2 {
+.page .Dash .index .social h2 {
   margin-bottom: 25px;
 }
-.page .Dash .content .social .row {
+.page .Dash .index .social .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 119, 255, 0.231372549);
   margin-bottom: 20px;
 }
-.page .Dash .content .social .row .left {
+.page .Dash .index .social .row .left {
   display: flex;
   align-items: center;
 }
-.page .Dash .content .social .row .left i {
+.page .Dash .index .social .row .left i {
   background-color: #0075f2;
   font-size: 23px;
   color: #fff;
@@ -672,54 +755,59 @@ a {
   justify-content: center;
   transition: 0.3s;
 }
-.page .Dash .content .social .row .left i:hover {
+.page .Dash .index .social .row .left i:hover {
   transform: rotate(5deg);
 }
-.page .Dash .content .social .row .left span {
+.page .Dash .index .social .row .left span {
   color: #0075f2;
 }
-.page .Dash .content .social .row a {
+.page .Dash .index .social .row a {
   margin-right: 25px;
   padding: 5px 10px;
   background-color: #0075f2;
   color: white;
   border-radius: 6px;
 }
-.page .Dash .content .social .row.youtube {
+.page .Dash .index .social .row.youtube {
   background-color: rgba(255, 0, 0, 0.274);
 }
-.page .Dash .content .social .row.youtube .left i {
+.page .Dash .index .social .row.youtube .left i {
   background-color: red;
 }
-.page .Dash .content .social .row.youtube .left span {
+.page .Dash .index .social .row.youtube .left span {
   color: red;
 }
-.page .Dash .content .social .row.youtube a {
+.page .Dash .index .social .row.youtube a {
   background-color: red;
 }
-.page .Dash .content .social .row.linkedin {
+.page .Dash .index .social .row.linkedin {
   background-color: hsla(201deg, 100%, 35%, 0.219);
 }
-.page .Dash .content .social .row.linkedin .left i {
+.page .Dash .index .social .row.linkedin .left i {
   background-color: hsl(201deg, 100%, 35%);
 }
-.page .Dash .content .social .row.linkedin .left span {
+.page .Dash .index .social .row.linkedin .left span {
   color: #0077b5;
 }
-.page .Dash .content .social .row.linkedin a {
+.page .Dash .index .social .row.linkedin a {
   background-color: #0077b5;
 }
-.page .Dash .content .social .row.twetter {
+.page .Dash .index .social .row.twetter {
   background-color: rgba(29, 160, 242, 0.322);
 }
-.page .Dash .content .social .row.twetter .left i {
+.page .Dash .index .social .row.twetter .left i {
   background-color: #1da1f2;
 }
-.page .Dash .content .social .row.twetter .left span {
+.page .Dash .index .social .row.twetter .left span {
   color: #1da1f2;
 }
-.page .Dash .content .social .row.twetter a {
+.page .Dash .index .social .row.twetter a {
   background-color: #1da1f2;
+}
+@media (max-width: 767px) {
+  .page .Dash .content {
+    grid-template-columns: minmax(100px, 1fr);
+  }
 }
 .page .Dash .table-dash {
   margin: 0 20px;
@@ -807,11 +895,237 @@ a {
   bottom: 10px;
   z-index: 1;
 }
-.page .setting .content {
+.page .setting .settingcontent {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
-  margin: 40px 20px;
+  margin: 0px 20px;
+}
+.page .setting .settingcontent .websiteturn h2 {
+  margin-bottom: 5px;
+}
+.page .setting .settingcontent .websiteturn p {
+  font-size: 13px;
+  color: #aaa;
+}
+.page .setting .settingcontent .websiteturn .control {
+  margin-bottom: 20px;
+}
+.page .setting .settingcontent .websiteturn .control h4 {
+  margin: 20px 0 2px;
+}
+.page .setting .settingcontent .websiteturn .control .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .setting .settingcontent .websiteturn textarea {
+  resize: none;
+  width: 100%;
+  border: 1px solid #ccc;
+  min-height: 150px;
+  outline: 1px solid #ccc;
+  padding: 10px;
+}
+.page .setting .settingcontent .generalinfo h2 {
+  margin-bottom: 5px;
+}
+.page .setting .settingcontent .generalinfo p {
+  color: #aaa;
+  font-size: 13px;
+}
+.page .setting .settingcontent .generalinfo form {
+  margin: 20px 0;
+}
+.page .setting .settingcontent .generalinfo form label {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.page .setting .settingcontent .generalinfo form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+.page .setting .settingcontent .generalinfo form input[type=email] {
+  width: calc(100% - 85px);
+  color: #999;
+  cursor: no-drop;
+}
+.page .setting .settingcontent .generalinfo form button {
+  border: none;
+  padding: 5px 10px;
+  background-color: white;
+  color: blue;
+  font-weight: 500;
+  cursor: pointer;
+}
+.page .setting .settingcontent .Security h2 {
+  margin-bottom: 5px;
+}
+.page .setting .settingcontent .Security p {
+  font-size: 13px;
+  color: #999;
+}
+.page .setting .settingcontent .Security .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px 0 20px;
+}
+.page .setting .settingcontent .Security .row .info h4 {
+  margin-bottom: 5px;
+}
+.page .setting .settingcontent .Security .row button {
+  background-color: #0075ff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+.page .setting .settingcontent .Security .row:not(:last-of-type) {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+.page .setting .settingcontent .Security .Devices button {
+  background-color: #eee;
+  color: black;
+  font-weight: 400;
+  cursor: pointer;
+}
+.page .setting .settingcontent .Social h2 {
+  margin-bottom: 5px;
+}
+.page .setting .settingcontent .Social p {
+  font-size: 14px;
+  color: #999;
+}
+.page .setting .settingcontent .Social div {
+  margin: 25px 0;
+}
+.page .setting .settingcontent .Social div i {
+  padding: 10px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  color: #aaa;
+  border-radius: 6px 0 0 6px;
+  border-right: none;
+  transition: 0.3s;
+}
+.page .setting .settingcontent .Social div input {
+  width: 100%;
+  padding: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 0 6px 6px 0;
+}
+.page .setting .settingcontent .Social div:focus-within i {
+  color: #0075ff;
+  font-size: 19px;
+}
+.page .setting .settingcontent .W-control h2 {
+  margin-bottom: 5px;
+}
+.page .setting .settingcontent .W-control p {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #999;
+}
+.page .setting .settingcontent .W-control .control input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.page .setting .settingcontent .W-control .control label {
+  cursor: pointer;
+  position: relative;
+}
+.page .setting .settingcontent .W-control .control label::before {
+  content: "";
+  position: absolute;
+  border: 1px solid #000;
+  width: 14px;
+  height: 14px;
+  left: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.page .setting .settingcontent .W-control .control label::after {
+  font-family: "Font Awesome 6 pro";
+  position: absolute;
+  content: "\f00c";
+  left: -24px;
+  font-size: 13px;
+  background-color: #0075ff;
+  color: white;
+  font-weight: 800;
+  top: 1px;
+  width: 17px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0) rotate(360deg);
+  transition: 0.3s;
+}
+.page .setting .settingcontent .W-control .control input[type=checkbox]:checked + label::after {
+  transform: scale(1);
+}
+.page .setting .settingcontent .W-control .control {
+  align-items: center;
+  margin-bottom: 25px;
+}
+.page .setting .settingcontent .W-control .control label {
+  margin-left: 25px;
+}
+.page .setting .settingcontent .backup h2 {
+  margin-bottom: 5px;
+}
+.page .setting .settingcontent .backup p {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: #999;
+}
+.page .setting .settingcontent .backup .bup {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.page .setting .settingcontent .backup .bup label {
+  padding-left: 30px;
+}
+.page .setting .settingcontent .backup .lastofbup {
+  margin-bottom: 30px;
+}
+.page .setting .settingcontent .backup .threeboxs {
+  justify-content: space-around;
+  border-top: 1px solid #ccc;
+  padding-top: 25px;
+  gap: 5px;
+}
+.page .setting .settingcontent .backup .threeboxs input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.page .setting .settingcontent .backup .threeboxs input[type=radio]:checked + label {
+  border-color: #0075ff;
+  color: #0075ff;
+}
+.page .setting .settingcontent .backup .threeboxs label {
+  border: 2px solid #999;
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.page .setting .settingcontent .backup .threeboxs label i {
+  margin: 10px 0 0;
+}
+.page .setting .settingcontent .backup .threeboxs label span {
+  margin: 1px 0 10px;
 }
 
 .page .project {
@@ -842,11 +1156,111 @@ a {
   bottom: 10px;
   z-index: 1;
 }
-.page .project .content {
+.page .project .projectcontent {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap: 20px;
-  margin: 40px 20px;
+  margin: 0px 20px;
+}
+.page .project .projectcontent .boxP {
+  position: relative;
+}
+.page .project .projectcontent .boxP .time {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #888;
+}
+.page .project .projectcontent .boxP h4 {
+  margin-bottom: 10px;
+}
+.page .project .projectcontent .boxP p {
+  font-size: 14px;
+  color: #999;
+}
+.page .project .projectcontent .boxP .avatar {
+  margin: 30px 0 20px;
+  position: relative;
+  min-height: 60px;
+}
+.page .project .projectcontent .boxP .avatar img {
+  width: 35px;
+  height: 35px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  cursor: pointer;
+}
+.page .project .projectcontent .boxP .avatar img:nth-child(2) {
+  left: 25px;
+  z-index: 1;
+}
+.page .project .projectcontent .boxP .avatar img:nth-child(3) {
+  left: 50px;
+  z-index: 1;
+}
+.page .project .projectcontent .boxP .avatar img:nth-child(4) {
+  left: 75px;
+  z-index: 1;
+}
+.page .project .projectcontent .boxP .avatar img:nth-child(5) {
+  left: 100px;
+  z-index: 1;
+}
+.page .project .projectcontent .boxP .avatar img:hover {
+  z-index: 2;
+}
+.page .project .projectcontent .boxP .label {
+  margin: 5px 0;
+  padding: 20px 0;
+  border-color: #eee;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  display: flex;
+  gap: 10px;
+  flex-direction: row-reverse;
+}
+.page .project .projectcontent .boxP .label span {
+  background-color: #e5e5e9;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+.page .project .projectcontent .boxP .prog-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.page .project .projectcontent .boxP .prog-price .prog {
+  width: 200px;
+  height: 6px;
+  background-color: #ccc;
+  border-radius: 8px;
+  position: relative;
+}
+.page .project .projectcontent .boxP .prog-price .prog span {
+  position: absolute;
+  bottom: 0;
+  height: 6px;
+  width: 30%;
+  background-color: red;
+  border-radius: 9px;
+}
+.page .project .projectcontent .boxP .prog-price .price .dollar {
+  font-size: 20px;
+}
+.page .project .projectcontent .boxP .prog-price .price span {
+  color: #999;
+}
+@media (max-width: 767px) {
+  .page .project .projectcontent {
+    grid-template-columns: minmax(200px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
 }
 
 .page .file {
@@ -1017,11 +1431,190 @@ a {
   bottom: 10px;
   z-index: 1;
 }
-.page .profile .content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+.page .profile .content .inform {
+  margin: 20px 20px;
+  display: flex;
+}
+.page .profile .content .inform .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #ccc;
+  padding-right: 20px;
+  width: 300px;
+}
+.page .profile .content .inform .left img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.page .profile .content .inform .left h3 {
+  text-transform: capitalize;
+  margin-bottom: 0;
+}
+.page .profile .content .inform .left p {
+  margin: 10px 0 5px;
+  color: #999;
+}
+.page .profile .content .inform .left .progress {
+  width: 150px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: #999;
+  margin: 10px 0;
+  position: relative;
+}
+.page .profile .content .inform .left .progress span {
+  position: absolute;
+  width: 50%;
+  height: 6px;
+  background-color: blue;
+  border-radius: 6px;
+  bottom: 0;
+  left: 0;
+}
+.page .profile .content .inform .left .stars i.active {
+  color: orange;
+}
+.page .profile .content .inform .left span {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+}
+.page .profile .content .inform .right {
+  width: 100%;
+}
+.page .profile .content .inform .right .row {
+  padding-bottom: 25px;
+  padding-left: 20px;
+}
+.page .profile .content .inform .right .row h4 {
+  margin: 0 0 10px;
+  color: #777;
+  color: 15px;
+}
+.page .profile .content .inform .right .row .info {
+  color: #999;
+  text-transform: capitalize;
+  display: flex;
+  flex-wrap: wrap;
+}
+.page .profile .content .inform .right .row .info div {
+  max-width: 300px;
+  margin-top: 5px;
+}
+.page .profile .content .inform .right .row .info div span {
+  color: black;
+  margin-right: 25px;
+}
+.page .profile .content .inform .right .row .info div .toggle-checkbox:checked + .toggle-switch::before {
+  left: 72px;
+}
+.page .profile .content .inform .right .row .info div .toggle-switch {
+  width: 90px;
+  height: 17px;
+}
+.page .profile .content .inform .right .row .info div .toggle-switch::before {
+  left: 4px;
+  top: 2px;
+  width: 13px;
+  height: 13px;
+  font-size: 12px;
+}
+.page .profile .content .inform .right .row:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+.page .profile .content .inform .right .row {
+  padding-top: 20px;
+}
+.page .profile .content .inform .right .row:hover {
+  background-color: #eee;
+}
+.page .profile .content .rowskill {
+  margin: 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  margin: 40px 20px;
+  margin-right: 20px;
+}
+.page .profile .content .rowskill .skill {
+  flex-grow: 1;
+}
+.page .profile .content .rowskill .skill h2 {
+  margin-bottom: 10px;
+}
+.page .profile .content .rowskill .skill p {
+  font-size: 14px;
+  color: #999;
+}
+.page .profile .content .rowskill .skill .row {
+  margin: 10px 0;
+  padding: 15px 0;
+}
+.page .profile .content .rowskill .skill .row span {
+  background-color: #eee;
+  padding: 3px 10px;
+  border-radius: 9px;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.page .profile .content .rowskill .skill .row:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+.page .profile .content .rowskill .activeties {
+  flex-grow: 2;
+}
+.page .profile .content .rowskill .activeties h2 {
+  margin-bottom: 10px;
+}
+.page .profile .content .rowskill .activeties p {
+  font-size: 14px;
+  color: #999;
+}
+.page .profile .content .rowskill .activeties .row {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.page .profile .content .rowskill .activeties .row .left {
+  display: flex;
+  gap: 10px;
+}
+.page .profile .content .rowskill .activeties .row .left img {
+  width: 65px;
+}
+.page .profile .content .rowskill .activeties .row .left .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.page .profile .content .rowskill .activeties .row .left .info h5 {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.page .profile .content .rowskill .activeties .row .left .info p {
+  text-transform: capitalize;
+  font-size: 15px;
+}
+.page .profile .content .rowskill .activeties .row .right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.page .profile .content .rowskill .activeties .row .right h5 {
+  font-size: 16px;
+}
+.page .profile .content .rowskill .activeties .row .right p {
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.page .profile .content .rowskill .activeties .row:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
 }
 
 .disflex {

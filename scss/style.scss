@@ -10,6 +10,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  outline: none;
 }
 
 html {
@@ -35,7 +36,90 @@ a{
   margin-right: auto;
 }
 
+label{
+  display: flex;
+  .toggle-checkbox{
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .toggle-switch{
+    width: 78px;
+    height: 32px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .toggle-switch::before{
+    font-family: "Font Awesome 6 pro";
+    content: '\f00d';
+    font-weight: 900;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 4px;
+    top: 4px;
+    color: #ccc;
+    transition: 0.3s;
+  }
+  .toggle-checkbox:checked + .toggle-switch{
+    background-color: #0075ff;
+  }
+  .toggle-checkbox:checked + .toggle-switch::before{
+    content: '\f00c';
+    left: 50px;
+    color: #0075ff
+  }
+}
 
+.bup{
+  label{
+    cursor: pointer;
+    position: relative;
+  }
+  input[type="radio"]{
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  input[type="radio"]:checked + label::after,
+  input[type="radio"]:checked + label::before{
+    transform: scale(1);
+    border-color: #0075ff;
+  }
+  label::before{
+    content: '';
+    position: absolute;
+    border: 2px solid #888;
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 1;
+    border-radius: 50%;
+    margin-right: 20px;
+    // transform: scale(0);
+  }
+  label::after{
+    content: '';
+    position: absolute;
+    left: 4px;
+    background-color: #0075ff;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: .3s;
+  }
+}
 
 
 

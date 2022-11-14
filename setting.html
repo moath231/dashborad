@@ -93,15 +93,164 @@
       <div class="setting">
         <h1>setting</h1>
 
-        <div class="content">
-          content
+        <div class="content settingcontent">
+
+          <div class="box websiteturn bg-white rad-6 p-20">
+            <h2>Site Control</h2>
+            <p>Control The Website If There Is Maintenance</p>
+            <div class="control">
+              <h4>Website Control</h4>
+              <div class="text">
+                <p>Open/Close Website And Type The Reason</p>
+                <label id="labelbtn">
+                  <input class="toggle-checkbox" type="checkbox">
+                  <div class="toggle-switch"></div>
+                </label>
+              </div>
+            </div>
+            <textarea cols="30" rows="10"></textarea>
+          </div>
+
+          <div class="box generalinfo bg-white rad-6 p-20">
+            <h2>General Info</h2>
+            <p>General Information About Your Account</p>
+
+            <form action="">
+              <label for="">First Name</label>
+              <input type="text" name="" id="">
+
+              <label for="">Last Name</label>
+              <input type="text" name="" id="">
+
+              <label for="">Email</label>
+              <input type="email" value="amsk@gmail.com">
+              <button>change</button>
+            </form>
+          </div>
+
+          <div class="box Security bg-white rad-6 p-20">
+            <h2>Security Info</h2>
+            <p>Security Information About Your Account</p>
+            <div class="row">
+              <div class="info">
+                <h4>Password</h4>
+                <p>Last Change On 30/09/2022</p>
+              </div>
+              <button>change</button>
+            </div>
+            <div class="row">
+              <div class="info">
+                <h4>Two-Factor Authentication</h4>
+                <p>Enable/Disable The Feature</p>
+              </div>
+              <label>
+                <input class="toggle-checkbox" type="checkbox">
+                <div class="toggle-switch"></div>
+              </label>
+            </div>
+            <div class="row Devices">
+              <div class="info">
+                <h4>Devices</h4>
+                <p>Check The Login Devices List</p>
+              </div>
+              <button>change</button>
+            </div>
+          </div>
+
+          <div class="Social bg-white rad-6 p-20">
+            <h2>Social Info</h2>
+            <p>Social Media Information</p>
+            <div class="disflex">
+              <i class="fa-brands fa-twitter"></i>
+              <input type="text" placeholder="Twitter Username">
+            </div>
+            <div class="disflex">
+              <i class="fa-brands fa-facebook"></i>
+              <input type="text" placeholder="facebook Username">
+            </div>
+            <div class="disflex">
+              <i class="fa-brands fa-linkedin"></i>
+              <input type="text" placeholder="linkedin Username">
+            </div>
+            <div class="disflex">
+              <i class="fa-brands fa-instagram"></i>
+              <input type="text" placeholder="instagram Username">
+            </div>
+          </div>
+
+          <div class="W-control bg-white rad-6 p-20">
+            <h2>Social Info</h2>
+            <p>Social Media Information</p>
+            <div class="control disflex">
+              <input type="checkbox" id="one">
+              <label for="one" check>Quick draft</label>
+            </div>
+            <div class="control disflex">
+              <input type="checkbox" id="tow" checked>
+              <label for="tow">Yearly Targets</label>
+            </div>
+            <div class="control disflex">
+              <input type="checkbox" id="three" checked>
+              <label for="three">Tickets Statistics</label>
+            </div>
+            <div class="control disflex">
+              <input type="checkbox" id="four">
+              <label for="four">Latest News</label>
+            </div>
+            <div class="control disflex">
+              <input type="checkbox" id="five" checked>
+              <label for="five">Latest Tasks</label>
+            </div>
+            <div class="control disflex">
+              <input type="checkbox" id="sex" checked>
+              <label for="sex">Top Search Items</label>
+            </div>
+          </div>
+
+          <div class="backup bg-white rad-6 p-20">
+            <h2>Backup Manager</h2>
+            <p>Control Backup Time And Location</p>
+            <div class="bup radiobutton disflex">
+              <input type="radio" id="rone" name="time" checked>
+              <label for="rone" check>Quick draft</label>
+            </div>
+            <div class="bup radiobutton disflex">
+              <input type="radio" id="rtow" name="time">
+              <label for="rtow" check>Quick draft</label>
+            </div>
+            <div class="bup lastofbup radiobutton disflex">
+              <input type="radio" id="rthree" name="time">
+              <label for="rthree" check>Quick draft</label>
+            </div>
+
+            <div class="threeboxs disflex">
+              <input type="radio" name="boxthree" id="boxthreeone">
+              <label for="boxthreeone">
+                <i class="fa-solid fa-server"></i>
+                <span>shared</span>
+              </label>
+              <input type="radio" name="boxthree" id="boxthreetow" checked>
+              <label for="boxthreetow">
+                <i class="fa-solid fa-server"></i>
+                <span>VPN</span>
+              </label>
+              <input type="radio" name="boxthree" id="boxthreethree">
+              <label for="boxthreethree">
+                <i class="fa-solid fa-server"></i>
+                <span>pro</span>
+              </label>
+            </div>
+          </div>
+
+
         </div>
 
       </div>
 
     </div>
   </main>
-  <footer></footer>
+  <footer>
+  </footer>
 
   <script src="./js/script.js"></script>
 </body>
