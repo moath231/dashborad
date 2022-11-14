@@ -32,13 +32,72 @@
     }
 
 
-    .content {
+    .coursescontent {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 20px;
-      margin: 40px 20px;
+      margin: 0px 20px;
 
-
+      .box{
+        .head{
+          position: relative;
+          img{
+            width: 100%;
+          }
+          img.avatar{
+            position: absolute;
+            width: 60px;
+            left: 15px;
+            top: 15px;
+          }
+        }
+        .body{
+          padding: 10px;
+          margin-bottom: 25px;
+          h3{
+            margin-bottom: 15px;
+            text-transform: capitalize;
+          }
+          p{
+            color: #898989;
+          }
+        }
+        .foot{
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 30px 15px 15px 15px;
+          border-top: 1px solid #eee;
+          span{
+            color: #898989;
+            font-size: 14px;
+          }
+          span.user::before{
+            font-family: "font awesome 6 pro";
+            content: '\f0c0';
+            padding-right: 10px;
+          }
+          span.price::before{
+            font-family: "font awesome 6 pro";
+            content: '\24';
+            padding-right: 10px;
+            font-size: 18px;
+          }
+          button{
+            position: absolute;
+            left: 50%;
+            top: -15px;
+            transform: translateX(-50%);
+            border: none;
+            padding: 5px 10px;
+            border-radius: 9px;
+            background-color: #0075ff;
+            color: white;
+            font-weight: 700;
+          }
+        }
+      }
     }
   }
 }

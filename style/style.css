@@ -1396,11 +1396,69 @@ label .toggle-checkbox:checked + .toggle-switch::before {
   bottom: 10px;
   z-index: 1;
 }
-.page .courses .content {
+.page .courses .coursescontent {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
-  margin: 40px 20px;
+  margin: 0px 20px;
+}
+.page .courses .coursescontent .box .head {
+  position: relative;
+}
+.page .courses .coursescontent .box .head img {
+  width: 100%;
+}
+.page .courses .coursescontent .box .head img.avatar {
+  position: absolute;
+  width: 60px;
+  left: 15px;
+  top: 15px;
+}
+.page .courses .coursescontent .box .body {
+  padding: 10px;
+  margin-bottom: 25px;
+}
+.page .courses .coursescontent .box .body h3 {
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+.page .courses .coursescontent .box .body p {
+  color: #898989;
+}
+.page .courses .coursescontent .box .foot {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 15px 15px 15px;
+  border-top: 1px solid #eee;
+}
+.page .courses .coursescontent .box .foot span {
+  color: #898989;
+  font-size: 14px;
+}
+.page .courses .coursescontent .box .foot span.user::before {
+  font-family: "font awesome 6 pro";
+  content: "\f0c0";
+  padding-right: 10px;
+}
+.page .courses .coursescontent .box .foot span.price::before {
+  font-family: "font awesome 6 pro";
+  content: "$";
+  padding-right: 10px;
+  font-size: 18px;
+}
+.page .courses .coursescontent .box .foot button {
+  position: absolute;
+  left: 50%;
+  top: -15px;
+  transform: translateX(-50%);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 9px;
+  background-color: #0075ff;
+  color: white;
+  font-weight: 700;
 }
 
 .page .profile {
