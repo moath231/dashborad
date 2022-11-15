@@ -343,11 +343,13 @@ label .toggle-checkbox:checked + .toggle-switch::before {
   margin-top: 15px;
   width: 100%;
   background-color: rgba(0, 117, 255, 0.3);
+  transition: 0.8s;
 }
 .page .Dash .index .Targets .row .right .progress span {
   position: absolute;
   height: 4px;
   background-color: #0075ff;
+  transition: 0.8s;
 }
 .page .Dash .index .Targets .row .right .progress span span {
   position: absolute;
@@ -360,6 +362,7 @@ label .toggle-checkbox:checked + .toggle-switch::before {
   right: -13px;
   color: white;
   border-radius: 6px;
+  transition: 0.8s;
 }
 .page .Dash .index .Targets .row .right .progress span span::after {
   content: "";
@@ -370,6 +373,7 @@ label .toggle-checkbox:checked + .toggle-switch::before {
   left: 50%;
   top: 23px;
   transform: translateX(-50%);
+  transition: 0.8s;
 }
 .page .Dash .index .Targets .green .i {
   background-color: rgba(34, 197, 94, 0.2);
@@ -803,6 +807,80 @@ label .toggle-checkbox:checked + .toggle-switch::before {
 }
 .page .Dash .index .social .row.twetter a {
   background-color: #1da1f2;
+}
+.page .Dash .index .todo {
+  position: relative;
+}
+.page .Dash .index .todo h2 {
+  margin-bottom: 40px;
+}
+.page .Dash .index .todo button {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 9px;
+  background-color: #0075ff;
+  color: white;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.page .Dash .index .todo form {
+  position: absolute;
+  background-color: #eee;
+  width: 300px;
+  height: 120px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.7s;
+  display: none;
+}
+.page .Dash .index .todo form i {
+  font-size: small;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.page .Dash .index .todo form input {
+  width: 200px;
+  height: 30px;
+  transform: translate(30px, 40px);
+  border-radius: 6px;
+  padding-left: 5px;
+}
+.page .Dash .index .todo form input[type=button] {
+  width: fit-content;
+  display: block;
+  transform: translate(120px, 50px);
+  border: none;
+  background-color: #0075ff;
+  border-radius: 9px;
+  color: white;
+  text-transform: capitalize;
+  font-weight: 600;
+  cursor: pointer;
+}
+.page .Dash .index .todo .list .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.page .Dash .index .todo .list .row span {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.page .Dash .index .todo .list .row i {
+  cursor: pointer;
+}
+.page .Dash .index .todo .list .row:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
 }
 @media (max-width: 767px) {
   .page .Dash .content {

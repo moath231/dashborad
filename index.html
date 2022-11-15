@@ -22,7 +22,8 @@
 </head>
 
 <body>
-  <header></header>
+  <header class="demo">
+  </header>
 
   <main>
     <div class="page disflex bg-gray">
@@ -145,8 +146,8 @@
                 <span>Moany</span>
                 <h4>$100.000</h4>
                 <div class="progress pos-relative">
-                  <span style="width: 80%;">
-                    <span>80%</span>
+                  <span class="first" data-width="80%" style="width: 0%;">
+                    <span class="secend">0%</span>
                   </span>
                 </div>
               </div>
@@ -160,8 +161,8 @@
                 <span>project</span>
                 <h4>32</h4>
                 <div class="progress pos-relative">
-                  <span style="width: 38%;">
-                    <span>38%</span>
+                  <span class="first" data-width="43%" style="width: 0%;">
+                    <span class="secend">38%</span>
                   </span>
                 </div>
               </div>
@@ -175,8 +176,8 @@
                 <span>team</span>
                 <h4>24</h4>
                 <div class="progress pos-relative">
-                  <span style="width: 55%;">
-                    <span>55%</span>
+                  <span class="first" data-width="88%" style="width: 0%;">
+                    <span class="secend">55%</span>
                   </span>
                 </div>
               </div>
@@ -465,6 +466,18 @@
             </div>
 
 
+          </div>
+
+          <div class="box todo bg-white rad-6 p-20">
+            <h2>To-Do list</h2>
+            <button>add</button>
+            <form>
+              <i class="fa-regular fa-x"></i>
+              <input type="text">
+              <input type="button" value="submit">
+            </form>
+            <div class="list">
+            </div>
           </div>
 
         </div>
